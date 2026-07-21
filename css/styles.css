@@ -1,0 +1,22 @@
+﻿#customFilterBtn {
+    width: 170px;
+    border: 2px solid;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 5px 15px;
+    background: white;
+    cursor: pointer
+}
+
+.customLabel {
+    margin: 3px;
+    font-weight: 700;
+}
+
+.flex-h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 20px;
+}

@@ -1,0 +1,66 @@
+<div id="customFilterModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Custom Filter</h5>
+                <button type="button" class="btn btn-sm btn-outline-secondary close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="flex-h">
+                    <div class="form-group">
+                        <label class="customLabel">Max Tabs:</label>
+                        <input id="filterMaxTabs" type="number" min="1" max="1000" class="form-control" style="width: 100px" value="10"></input>
+                    </div>
+                    <div class="form-group">
+                        <label class="customLabel">Min Rating:</label>
+                        <input id="filterMinRating" type="number" min="1" max="5" class="form-control" style="width: 100px" value="4.8" step=".1"></input>
+                    </div>
+                    <div class="form-group">
+                        <label class="customLabel">Min Votes:</label>
+                        <input id="filterMinVotes" type="number" class="form-control" style="width: 100px" value="10"></input>
+                    </div>
+                </div>
+                <div class="flex-h">
+                    <div class="form-group">
+                        <label class="customLabel">
+                            <input id="filterKingBed" type="checkbox" class="form-checkbox" checked="checked" >&nbsp;KingSize Bed</input>
+                        </label>       
+                    </div>
+                    <div class="form-group">
+                        <label class="customLabel">
+                            <input id="filterDishWasher" type="checkbox" class="form-checkbox" checked="checked" >&nbsp;Dishwasher</input>
+                        </label>       
+                    </div>
+                    <div class="form-group">
+                        <label class="customLabel">
+                            <input id="filterFastInternet" type="checkbox" class="form-checkbox" checked="checked" >&nbsp;Fast Internet</input>
+                        </label>       
+                    </div>
+                </div>
+                <div class="flex-h">
+                    <div class="form-group">
+                        <label class="customLabel">Body Must Contain:</label>
+                        <input id="filterContentText" type="text" class="form-control" style="width: 200px"></input> 
+                    </div>
+                </div>
+                <div class="flex-h">
+                    <div class="form-group">
+                        <label class="customLabel">Min Delay (sec.):</label>
+                        <input id="filterMinDelay" type="number" min="1" max="1000" class="form-control" style="width: 100px" value="1"></input>
+                    </div>
+                    <div class="form-group">
+                        <label class="customLabel">Max Delay (sec.):</label>
+                        <input id="filterMaxDelay" type="number" min="1" max="1000" class="form-control" style="width: 100px" value="5"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="customFilterStart" type="button" class="btn btn-outline-success">START</button>
+                <button id="customFilterStop" type="button" class="btn btn-outline-warning"
+                    style="display: none">STOP</button>
+            </div>
+        </div>
+    </div>
+</div>

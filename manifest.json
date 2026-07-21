@@ -1,0 +1,52 @@
+{
+	"name": "AirbnbFilter",
+	"description": "Make Airbnb much more useful",
+	"version": "1.2",
+	"manifest_version": 3,
+	"icons": {
+		"128": "/media/icon.png",
+		"48": "/media/icon.png",
+		"16": "/media/icon.png"
+	},
+	"background": {
+		"service_worker": "/js/background.js"
+	},
+	"content_scripts": [
+		{
+			"css": [
+				"/css/bootstrap.css",
+				"/css/styles.css"
+			],
+			"js": [
+				"/js/jquery.js",
+				"/js/bootstrap.js",
+				"/js/filter.js"
+			],
+			"matches": [
+				"https://www.airbnb.com/s/*"
+			],
+			"run_at": "document_end"
+		},
+		{
+			"js": [
+				"/js/filter-room.js"
+			],
+			"matches": [
+				"https://www.airbnb.com/rooms/*"
+			]
+		}
+	],
+	"permissions": [
+		"tabs",
+		"storage"
+	],
+	"host_permissions": [
+		"https://www.airbnb.com/*"
+	], 
+	"web_accessible_resources": [
+		{
+		  "resources": [ "/html/filter.html", "/media/spinner.gif"],		  
+		  "matches": [ "https://www.airbnb.com/*" ]
+		}
+	  ]
+}
